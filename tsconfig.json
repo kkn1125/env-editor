@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "resolveJsonModule": true,
+    "moduleResolution": "Node",
+    "declaration": true,
+    "allowJs": true,
+    "baseUrl": "./",
+    "paths": {
+      "@common/*": ["server/src/common/*"],
+      "@routes/*": ["server/src/routes/*"],
+      "@libs/*": ["server/libs/*"],
+      "@module/*": ["server/src/module/*"],
+      "@src/*": ["server/*"]
+    },
+    "typeRoots": ["node_modules/@types", "server/src/types"]
+  },
+  "include": ["server", "__tests__", "server/index.ts"],
+  "exclude": ["node_modules", "client"],
+  "ts-node": {
+    "files": true,
+    "require": ["tsconfig-paths/register"]
+  }
+}
